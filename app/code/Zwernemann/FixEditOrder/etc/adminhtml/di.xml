@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- QuoteAddressValidator überspringen — ist ein Storefront-Guard, im Admin nicht sinnvoll -->
+    <type name="Magento\Quote\Model\QuoteAddressValidator">
+        <plugin name="zwernemann_fixeditorder_skip_address_validation"
+                type="Zwernemann\FixEditOrder\Plugin\Quote\QuoteAddressValidatorPlugin"
+                sortOrder="10"/>
+    </type>
+
+    <!-- QuoteValidator::validateBeforeSubmit() überspringen — false positive beim Order-Edit -->
+    <type name="Magento\Quote\Model\QuoteValidator">
+        <plugin name="zwernemann_fixeditorder_skip_quote_validation"
+                type="Zwernemann\FixEditOrder\Plugin\Quote\QuoteValidatorPlugin"
+                sortOrder="10"/>
+    </type>
+
+</config>
