@@ -2,7 +2,7 @@
 
 Fixes the "Edit Order" function in Magento 2 admin for stores with MSI disabled.
 
-Related upstream issue: [magento/magento2#39958](https://github.com/magento/magento2/issues/39958)
+Related upstream issue: [magento/magento2#39958](https://github.com/magento/magento2/issues/39958) and  [magento/magento2#39898](https://github.com/magento/magento2/issues/39898)
 
 ---
 
